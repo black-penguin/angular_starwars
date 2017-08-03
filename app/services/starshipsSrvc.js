@@ -11,7 +11,6 @@ angular.module("starwars").service("starshipsSrvc", function($http)
       return res.data.results.map(e=>
       {
         e.id = e.url.slice(31, e.url.length-1)*1;
-        console.log(e.id);
         return e;
       })
     })

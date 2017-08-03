@@ -1,0 +1,21 @@
+<div>
+  <!-- I am a sharship owned by {{ship.owner}} -->
+  <div class="tile">
+    <p ng-if="ship.owner">Owner: {{ship.owner}}</p>
+    <p>Title: {{ship.details.name}}</p>
+    <p>Cost: {{ship.details.cost_in_credits}} Credits</p>
+    <p id="choice" ng-click="ship.fullDetails=!ship.fullDetails">More</p>
+    <!-- <p id="choice" ui-sref="starship({id:ship.details.id})">More Info</p> -->
+    <p id="choice" ng-click="ship.onPurchase()">Buy</p>
+    <p id="choice" ng-if="ship.owner" ng-click="ship.goToHyperSpace()">Hyperspace</p>
+    <!-- <input type="text" ng-model="Buyer" placeholder="Buyer" /> -->
+  </div>
+  <div ng-if="ship.fullDetails" class="tile">
+    <p>Manufacturer: {{ship.details.manufacturer}}</p>
+    <p>Hyperdrive: {{ship.details.hyperdrive_rating}}</p>
+    <p>Crew: {{ship.details.crew}}</p>
+    <p>Passengers: {{ship.details.passengers}}</p>
+    <p>Cargo Copacity: {{ship.details.cargo_capacity}}</p>
+    <p>Food Rashens: {{ship.details.consumables}}</p>
+  </div>
+</div>

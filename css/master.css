@@ -1,6 +1,8 @@
 body
 {
-  background-color: gray;
+  background-image: url("http://wallup.net/wp-content/uploads/2015/12/170248-Star_Wars-Star_Destroyer-Super_Star_Destroyer-TIE_Fighter-748x468.jpg");
+  background-size:cover;
+  /*background-position:center;*/
 }
 
 .nav
@@ -13,11 +15,6 @@ body
   margin-bottom: 20px;
 }
 
-.nav #choice
-{
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
 #choice
 {
@@ -34,4 +31,10 @@ body
 {
   font-weight: bolder;
   border: 4px solid blue;
+}
+
+.nav #choice
+{
+  margin-left: 5px;
+  margin-right: 5px;
 }

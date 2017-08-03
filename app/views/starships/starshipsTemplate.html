@@ -5,11 +5,11 @@
     <link rel="stylesheet" href="../../css/sharships.css">
   </head>
   <body>
-    <div class="tile" ng-repeat="ship in data">
-      <p>Title: {{ship.name}}</p>
-      <p>Cost: {{ship.cost_in_credits}} Credits</p>
-      <p>Manufacturer: {{ship.manufacturer}}</p>
-      <p id="choice" ui-sref="starship({id:ship.id})">More Info</p>
-    </div>
+    <starship on-purchase="owner = 'Han Solo'"
+              owner="{{owner}}"
+              full-details="false"
+              details="ship"
+              ng-repeat="ship in data">
+    </starship>
   </body>
 </html>
